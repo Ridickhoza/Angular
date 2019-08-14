@@ -1,0 +1,29 @@
+<h3>Update Ticket</h3>
+<form >
+  <div class="form-group">
+    <label for="name">Passenger Name</label>
+    <input type="text" class="form-control" id="passengerName"  [(ngModel)]="ticket.passengerName" name="passengerName">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Date of ticket Booking</label>
+    <input type="date" class="form-control" id="bookingDate"  [(ngModel)]="ticket.bookingDate" name="bookingDate">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Source Station</label>
+    <input type="text" class="form-control" id="sourceStation"  [(ngModel)]="ticket.sourceStation" name="sourceStation">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Destination Station</label>
+    <input type="text" class="form-control" id="destStation" [(ngModel)]="ticket.destStation" name="destStation">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Email</label>
+    <input type="text" class="form-control" id="emailId" [(ngModel)]="ticket.emailId" name="emailId">
+  </div>
+
+  <button type="submit" class="btn btn-success" (click)="updateTicket(ticket.id,ticket)" >Update</button>
+</form>

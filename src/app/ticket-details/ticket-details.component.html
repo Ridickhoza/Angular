@@ -1,0 +1,28 @@
+<div *ngIf="ticket">
+  <div>
+    <label>Passenger Name: </label> {{ticket.passengerName}}
+  </div>
+  <div>
+    <label>Booking date: </label> {{ticket.bookingDate}}
+  </div>
+  <div>
+    <label>Source Station: </label> {{ticket.sourceStation}}
+  </div>
+  <div>
+    <label>Destination Station: </label> {{ticket.destStation}}
+  </div>
+  <div>
+    <label>Email: </label> {{ticket.emailId}}
+  </div>
+  <div>
+    <label>Active: </label> {{ticket.active}}
+  </div>
+
+  <span class="button is-small btn-primary" *ngIf='ticket.active' (click)='updateActive(false)'>Inactive</span>
+
+  <span class="button is-small btn-primary" *ngIf='!ticket.active' (click)='updateActive(true)'>Active</span>
+
+  <span class="button is-small btn-danger" (click)='deleteTicket()'>Delete</span>
+
+  <hr/>
+</div>
